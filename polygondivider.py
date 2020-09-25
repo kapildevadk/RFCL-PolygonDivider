@@ -1198,7 +1198,7 @@ class ExampleWorker():
         # used to control progress bar (only send signal for an increase)
         QgsMessageLog.logMessage(f"progress 1: {j} {totalDivisions}", 'PolygonDivider', level=Qgis.Info)
         
-        currProgress = int((j*1.0) / totalDivisions * 100)
+        currProgress = int((j*1.0) // totalDivisions * 100)
 
         # check if you've been killed        
         if self.killed:
